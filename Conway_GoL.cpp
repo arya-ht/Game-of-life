@@ -8,13 +8,13 @@
 #define N 50
 using namespace std;
 // created  by Arya H - VAC
-void copy(int array1[N][N], int array2[N][N]) {
+void copy(int array1[N][N], int array2[N][N]) { //copies array
 	for (int j = 0; j < N; j++) {
 		for (int i = 0; i < N; i++)
 			array2[j][i] = array1[j][i];
 	}
 }
-void life(int array[N][N], char choice) {
+void life(int array[N][N], char choice) { //main logic of the game
 	int temp[N][N];
 	copy(array, temp);
 	for (int j = 1; j < N - 1; j++) {
@@ -54,7 +54,7 @@ bool compare(int array1[N][N], int array2[N][N]) {
 	else
 		return false;
 }
-void print(int array[N][N]) {
+void print(int array[N][N]) { // output
 	for (int j = 1; j < N - 1; j++) {
 		for (int i = 1; i < N; i++) {
 			if (array[j][i] == 1)
@@ -66,7 +66,7 @@ void print(int array[N][N]) {
 	}
 }
 
-int main() {
+int main(void) {
 	char ch, again,cont;
 	bool comparison;
 	int I, S = 1400; // init
